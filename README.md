@@ -32,8 +32,8 @@ Tech Stack
 4. If task includes "call", Omnidimension agent is triggered to handle voice automation
 
 ## 🌟 Demo
-
-[Insert deployed link here — e.g. Netlify/Vercel]
+Frontend deployed:
+https://task-companion.netlify.app/
 
 ---
 
