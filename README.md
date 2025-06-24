@@ -39,7 +39,7 @@ https://task-companion.netlify.app/
 
 ## 🎥 Video Demo
 
-[Link to demo video — e.g. YouTube or Google Drive]
+https://youtu.be/My34Zp1W_SM
 
 ---
 
