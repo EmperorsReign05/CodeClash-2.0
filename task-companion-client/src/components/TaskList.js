@@ -1,34 +1,20 @@
-import React, { useEffect, useState } from 'react';
-import { db } from '../firebase';
-import { collection, getDocs } from 'firebase/firestore';
-import './TaskList.css';  // optional — for styling
+import React from 'react';
+import './TaskList.css'; 
 
-function TaskList() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    const fetchTasks = async () => {
-      const querySnapshot = await getDocs(collection(db, 'tasks'));
-      const tasksData = querySnapshot.docs.map(doc => doc.data());
-      setTasks(tasksData);
-    };
-
-    fetchTasks();
-  }, []);
-
+function TaskList({ tasks }) {
   return (
-    <div className="task-list">
-      <h2>Task List</h2>
+    <div className="task-list-container">
+      <h2>Saved Tasks</h2>
       {tasks.length === 0 ? (
-        <p>No tasks yet.</p>
+        <p>No tasks yet!</p>
       ) : (
-        <ul>
-          {tasks.map((task, index) => (
-            <li key={index} className="task-card">
-              <strong>{task.title || task.task}</strong> <br />
-              Date: {task.date || 'N/A'} <br />
-              Time: {task.time || 'N/A'} <br />
-              Priority: {task.priority || 'N/A'}
+        <ul className="task-list">
+          {tasks.map(task => (
+            <li key={task.id} className="task-item">
+              {task.task}
+              <span className="task-date">
+                {task.createdAt?.toDate?.().toLocaleString?.() || ''}
+              </span>
             </li>
           ))}
         </ul>

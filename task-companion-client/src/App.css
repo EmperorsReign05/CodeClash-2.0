@@ -70,3 +70,38 @@ button[type="submit"]:hover {
   background-color: #357ab8;
   transform: translateY(-2px);
 }
+.task-input {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.task-input input {
+  width: 300px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 2px solid #888;
+  border-radius: 8px 0 0 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.task-input input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.task-input button {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-input button:hover {
+  background-color: #0056b3;
+}
